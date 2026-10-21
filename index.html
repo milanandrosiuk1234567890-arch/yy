@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Block Blast</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="floatingHud" class="floating-hud">
+      <span>Score</span>
+      <strong id="floatingScore">0</strong>
+    </div>
+
+    <div id="comboToast" class="combo-toast" aria-live="polite">Combo!</div>
+
+    <div class="app-shell">
+      <aside class="panel left-panel">
+        <div class="brand-wrap">
+          <div class="brand-mark">B</div>
+          <div>
+            <p class="eyebrow">Arcade Puzzle</p>
+            <h1>Block Blast</h1>
+          </div>
+        </div>
+
+        <div class="scoreboard">
+          <div class="stat-box accent">
+            <span>Score</span>
+            <strong id="score">0</strong>
+          </div>
+          <div class="stat-box">
+            <span>Best</span>
+            <strong id="best">0</strong>
+          </div>
+          <div class="stat-box">
+            <span>Combo</span>
+            <strong id="combo">x1</strong>
+          </div>
+          <div class="stat-box">
+            <span>Moves</span>
+            <strong id="moves">0</strong>
+          </div>
+        </div>
+
+        <div class="move-meter">
+          <div class="move-meter-header">
+            <span>Moves left</span>
+            <strong id="movesLeft">0</strong>
+          </div>
+          <div class="move-meter-bar">
+            <span id="movesBar"></span>
+          </div>
+        </div>
+
+        <div class="controls">
+          <button id="rotateBtn" class="action-btn">Rotate</button>
+          <button id="newGameBtn" class="action-btn alt">New Game</button>
+        </div>
+
+        <div class="info-card">
+          <span class="info-label">Hint</span>
+          <p id="status" class="status">Place your first piece.</p>
+        </div>
+      </aside>
+
+      <main class="board-panel">
+        <div class="board-wrap">
+          <div class="board-topline">
+            <span>Board</span>
+            <span id="levelBadge" class="level-badge">Warmup</span>
+          </div>
+          <div id="board" class="board" aria-label="Game board"></div>
+        </div>
+      </main>
+
+      <aside class="panel right-panel">
+        <h2>Tray</h2>
+        <div id="tray" class="tray" aria-label="Piece tray"></div>
+      </aside>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
